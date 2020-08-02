@@ -623,7 +623,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 #about .aboutImg img{
     float: right;
-    width: 100%;
+    width: 90%;
     height: 135%;
     transform: rotateZ(-5deg);
     border: 10px solid #D1C4E9;
