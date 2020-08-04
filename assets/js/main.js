@@ -10,7 +10,13 @@
       //   'overflow': 'visible'
       // });
     });
-    
+    $(window).on('resize',function(){
+      if(window.innerWidth<768)
+      $("#mobile-nav-toggle").show();
+      else
+      $("#mobile-nav-toggle").hide();
+
+    });
  new WOW().init();
 
  // Initiate superfish on nav menu
@@ -150,9 +156,11 @@ function runner() {
         i = 0;
         setTimeout(function() {feedbacker();}, 10);
       }
-    }, Math.floor(Math.random() * 220) + 50);
+    }, Math.floor(Math.random() ) + 30);
 }
-
+$("#discord").click(function(){
+      window.alert('kirtikumar#5632');
+});
 var count = 0;
 var time = 1;
 function feedbacker() {
@@ -180,14 +188,15 @@ function feedbacker() {
       else {
         textarea.append("<br>Initialising...<br>");
         setTimeout(function() {
-          $(".load").fadeOut(1000);
-          $(".afterload").fadeIn(3000);
-          setTimeout(function(){
-            window.scrollTo(0,0);  
-
-          },500)
+          $(".load").fadeOut(500);
+          if(window.innerWidth<768)
+                $("#mobile-nav-toggle").show();
 
         }, 500);
+        setTimeout(function(){
+          window.scrollTo(0,0);  
+          $(".afterload").fadeIn(3000);
+        },1000);
       }
     },time);
 }
